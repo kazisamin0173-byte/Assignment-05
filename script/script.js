@@ -34,6 +34,7 @@ function buttonInactive(buttonId) {
     displayData(filterData)
 
     cardSize.innerText = 44; 
+    removeLoading();
 } else if (buttonId == "close") {
 
     allButton.classList.remove("btn-primary");
@@ -41,10 +42,11 @@ function buttonInactive(buttonId) {
     closeButton.classList.add("btn-primary");
 
     const filterData = allDataCard.filter(problem => problem.status === "closed")
-
+    
     displayData(filterData)
 
     cardSize.innerText = 6; 
+    removeLoading();
 }
 
 }
@@ -97,10 +99,10 @@ const displayData = (array) => {
     array.forEach(problem => {
 
         const card = document.createElement("div");
-let statusIcon = "../assets/Open-Status.png";
+let statusIcon = "./assets/Open-Status.png";
 
 if(problem.status === "closed"){
-    statusIcon = "../assets/Closed- Status .png";
+    statusIcon = "./assets/Closed-Status.png";
 }
         
 
