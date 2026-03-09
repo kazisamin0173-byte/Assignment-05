@@ -11,6 +11,6 @@ loginBtn.addEventListener("click", function () {
     window.location.assign("./home.html")
     alert("Sign in Successful");
   } else {
-    alert("Please input right Username and Password");
+    alert("Please Input Right Username and Password");
   }
 });
